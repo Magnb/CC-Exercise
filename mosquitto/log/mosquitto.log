@@ -1,0 +1,657 @@
+1737051849: mosquitto version 2.0.20 starting
+1737051849: Config loaded from /mosquitto/config/mosquitto.conf.
+1737051849: Opening ipv4 listen socket on port 1883.
+1737051849: Opening ipv6 listen socket on port 1883.
+1737051849: mosquitto version 2.0.20 running
+1737052389: New connection from 192.168.65.1:50420 on port 1883.
+1737052389: New client connected from 192.168.65.1:50420 as mqtt-explorer-55e2653f (p2, c1, k60).
+1737052692: New connection from 192.168.65.1:51026 on port 1883.
+1737052692: New client connected from 192.168.65.1:51026 as auto-A8AB2A44-C560-C419-7463-EF6292032D2A (p2, c1, k60).
+1737052692: Client auto-A8AB2A44-C560-C419-7463-EF6292032D2A disconnected.
+1737053534: Client mqtt-explorer-55e2653f disconnected.
+1737053650: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737054231: New connection from 192.168.65.1:54111 on port 1883.
+1737054231: New client connected from 192.168.65.1:54111 as auto-89DE9058-E45C-CCE8-E7F6-43B41E4275CE (p2, c1, k60).
+1737054231: Client auto-89DE9058-E45C-CCE8-E7F6-43B41E4275CE closed its connection.
+1737054452: New connection from 192.168.65.1:54550 on port 1883.
+1737054452: New client connected from 192.168.65.1:54550 as auto-BE57E9F9-AAC5-D9FF-C610-D159621F7368 (p2, c1, k60).
+1737054543: Client auto-BE57E9F9-AAC5-D9FF-C610-D159621F7368 has exceeded timeout, disconnecting.
+1737054578: New connection from 192.168.65.1:54792 on port 1883.
+1737054578: New client connected from 192.168.65.1:54792 as auto-28CDB447-1C2E-B569-C0CF-DD42D093CF33 (p2, c1, k60).
+1737055023: Client auto-28CDB447-1C2E-B569-C0CF-DD42D093CF33 closed its connection.
+1737055034: New connection from 192.168.65.1:55708 on port 1883.
+1737055034: New client connected from 192.168.65.1:55708 as auto-42675EFE-7C40-AD6F-974B-7BD4383E7EA4 (p2, c1, k60).
+1737055393: Client auto-42675EFE-7C40-AD6F-974B-7BD4383E7EA4 closed its connection.
+1737055451: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737055526: New connection from 192.168.65.1:56674 on port 1883.
+1737055526: New client connected from 192.168.65.1:56674 as auto-2E077A34-D9F6-C1E0-CC59-57093FDA63DB (p2, c1, k60).
+1737055621: Client auto-2E077A34-D9F6-C1E0-CC59-57093FDA63DB closed its connection.
+1737055627: New connection from 192.168.65.1:56873 on port 1883.
+1737055627: New client connected from 192.168.65.1:56873 as auto-BA9D4AAB-A48B-34A0-2ABA-11D506C6C3C7 (p2, c1, k60).
+1737055665: Client auto-BA9D4AAB-A48B-34A0-2ABA-11D506C6C3C7 closed its connection.
+1737055670: New connection from 192.168.65.1:56955 on port 1883.
+1737055670: New client connected from 192.168.65.1:56955 as auto-C95728CB-83F5-AE93-B631-BA62CF495B55 (p2, c1, k60).
+1737055818: Client auto-C95728CB-83F5-AE93-B631-BA62CF495B55 closed its connection.
+1737055826: New connection from 192.168.65.1:57272 on port 1883.
+1737055826: New client connected from 192.168.65.1:57272 as auto-5CA3B46D-307E-0D13-989D-C7F56CC89E2B (p2, c1, k60).
+1737055981: Client auto-5CA3B46D-307E-0D13-989D-C7F56CC89E2B closed its connection.
+1737057903: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737063018: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737066141: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737070725: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737075834: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737081605: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737085985: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737091971: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737095061: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737099525: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737104206: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737108020: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737109821: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737111622: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737113423: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737115224: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737118504: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737121715: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737127568: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737130161: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737132998: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737135627: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737137472: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737141132: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737144558: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737148302: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737150281: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737153582: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737158744: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737164832: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737169757: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737175168: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737180036: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737183745: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737186387: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737193211: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737195012: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737196543: mosquitto version 2.0.20 terminating
+1737196543: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737196609: mosquitto version 2.0.20 starting
+1737196609: Config loaded from /mosquitto/config/mosquitto.conf.
+1737196609: Opening ipv4 listen socket on port 1883.
+1737196609: Opening ipv6 listen socket on port 1883.
+1737196609: mosquitto version 2.0.20 running
+1737196628: New connection from 192.168.65.1:33684 on port 1883.
+1737196628: New client connected from 192.168.65.1:33684 as auto-0E91608E-EACA-B75F-8922-60B01C2D5386 (p2, c1, k60).
+1737197876: Client auto-0E91608E-EACA-B75F-8922-60B01C2D5386 closed its connection.
+1737197919: New connection from 192.168.65.1:36268 on port 1883.
+1737197919: New client connected from 192.168.65.1:36268 as auto-E113CBFD-D46E-1CAC-929B-18B478966B5B (p2, c1, k60).
+1737197932: New connection from 192.168.65.1:36303 on port 1883.
+1737197932: New client connected from 192.168.65.1:36303 as auto-810378FE-7136-BF98-A767-C78B9171FBE2 (p2, c1, k60).
+1737197980: Client auto-810378FE-7136-BF98-A767-C78B9171FBE2 closed its connection.
+1737197980: Client auto-E113CBFD-D46E-1CAC-929B-18B478966B5B closed its connection.
+1737198057: New connection from 192.168.65.1:36545 on port 1883.
+1737198057: New client connected from 192.168.65.1:36545 as auto-56422701-A6C2-D2EC-39F9-0ACF42753040 (p2, c1, k60).
+1737198136: Client auto-56422701-A6C2-D2EC-39F9-0ACF42753040 closed its connection.
+1737198216: New connection from 192.168.65.1:36869 on port 1883.
+1737198216: New client connected from 192.168.65.1:36869 as auto-B6676023-CCC8-8954-625F-9F987C2B1544 (p2, c1, k60).
+1737198230: New connection from 192.168.65.1:36893 on port 1883.
+1737198230: New client connected from 192.168.65.1:36893 as auto-C16B604D-C345-DCA5-1937-CBD0A71EA2F9 (p2, c1, k60).
+1737198271: Client auto-C16B604D-C345-DCA5-1937-CBD0A71EA2F9 closed its connection.
+1737198410: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737198555: Client auto-B6676023-CCC8-8954-625F-9F987C2B1544 closed its connection.
+1737199889: New connection from 192.168.65.1:40207 on port 1883.
+1737199889: New client connected from 192.168.65.1:40207 as auto-B54D6011-51A7-4EE5-ABB5-FBB99B58BC87 (p2, c1, k60).
+1737200000: Client auto-B54D6011-51A7-4EE5-ABB5-FBB99B58BC87 closed its connection.
+1737200005: New connection from 192.168.65.1:40442 on port 1883.
+1737200005: New client connected from 192.168.65.1:40442 as auto-58025614-4E5A-2E21-D0A5-08464030867A (p2, c1, k60).
+1737200036: Client auto-58025614-4E5A-2E21-D0A5-08464030867A closed its connection.
+1737200104: New connection from 192.168.65.1:40646 on port 1883.
+1737200104: New client connected from 192.168.65.1:40646 as auto-6E228756-4AA1-3981-968B-B2C30F8CC569 (p2, c1, k60).
+1737200104: Client auto-6E228756-4AA1-3981-968B-B2C30F8CC569 closed its connection.
+1737200207: New connection from 192.168.65.1:40847 on port 1883.
+1737200207: New client connected from 192.168.65.1:40847 as auto-495B8201-4890-AF97-280E-CAC342E9F360 (p2, c1, k60).
+1737200207: Client auto-495B8201-4890-AF97-280E-CAC342E9F360 closed its connection.
+1737200211: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737200235: New connection from 192.168.65.1:40919 on port 1883.
+1737200235: New client connected from 192.168.65.1:40919 as auto-A2AB4085-D0D8-F3B7-1CAD-C334F6425A9B (p2, c1, k60).
+1737200250: Client auto-A2AB4085-D0D8-F3B7-1CAD-C334F6425A9B closed its connection.
+1737200279: New connection from 192.168.65.1:41002 on port 1883.
+1737200279: New client connected from 192.168.65.1:41002 as auto-7D2AF191-075B-FF1A-99EF-F22455CB45F3 (p2, c1, k60).
+1737200286: Client auto-7D2AF191-075B-FF1A-99EF-F22455CB45F3 closed its connection.
+1737200373: New connection from 192.168.65.1:41200 on port 1883.
+1737200373: New client connected from 192.168.65.1:41200 as auto-90F4EE9D-9AE5-F518-065C-463B2CEEA2F1 (p2, c1, k60).
+1737200413: Client auto-90F4EE9D-9AE5-F518-065C-463B2CEEA2F1 closed its connection.
+1737200451: New connection from 192.168.65.1:41358 on port 1883.
+1737200451: New client connected from 192.168.65.1:41358 as auto-A64A7B6B-DDDC-4C5B-2604-F07485B12BDE (p2, c1, k60).
+1737200550: Client auto-A64A7B6B-DDDC-4C5B-2604-F07485B12BDE closed its connection.
+1737200897: New connection from 192.168.65.1:42233 on port 1883.
+1737200897: New client connected from 192.168.65.1:42233 as auto-9EE3253D-5247-4C84-A446-3CEB02F86C6F (p2, c1, k60).
+1737201413: mosquitto version 2.0.20 terminating
+1737201413: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737201440: mosquitto version 2.0.20 starting
+1737201440: Config loaded from /mosquitto/config/mosquitto.conf.
+1737201440: Opening ipv4 listen socket on port 1883.
+1737201440: Opening ipv6 listen socket on port 1883.
+1737201440: mosquitto version 2.0.20 running
+1737201444: New connection from 192.168.65.1:43458 on port 1883.
+1737201444: New client connected from 192.168.65.1:43458 as auto-F4EDEB8C-170F-850F-9A35-436416273A46 (p2, c1, k60).
+1737201502: Client auto-F4EDEB8C-170F-850F-9A35-436416273A46 closed its connection.
+1737201506: New connection from 192.168.65.1:43581 on port 1883.
+1737201506: New client connected from 192.168.65.1:43581 as auto-2510972C-5A6E-C7F4-775E-95E6C42EDE7A (p2, c1, k60).
+1737201532: Client auto-2510972C-5A6E-C7F4-775E-95E6C42EDE7A closed its connection.
+1737201677: New connection from 192.168.65.1:43921 on port 1883.
+1737201677: New client connected from 192.168.65.1:43921 as auto-0D6851E9-863D-D77F-D123-6C549AAFFFA5 (p2, c1, k60).
+1737201775: Client auto-0D6851E9-863D-D77F-D123-6C549AAFFFA5 closed its connection.
+1737201914: New connection from 192.168.65.1:44397 on port 1883.
+1737201914: New client connected from 192.168.65.1:44397 as auto-FCBC00FE-D384-22B5-A76B-2FBBD3312E8A (p2, c1, k60).
+1737201968: Client auto-FCBC00FE-D384-22B5-A76B-2FBBD3312E8A closed its connection.
+1737201983: New connection from 192.168.65.1:44539 on port 1883.
+1737201983: New client connected from 192.168.65.1:44539 as auto-CF5F28BE-13F3-5761-5E37-532764899672 (p2, c1, k60).
+1737202066: Client auto-CF5F28BE-13F3-5761-5E37-532764899672 closed its connection.
+1737203241: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737205147: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737206948: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737208749: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737210550: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737212351: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737214917: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737216718: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737218519: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737220320: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737222121: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737223922: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737225723: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737227524: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737229713: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737232341: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737234142: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737235943: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737239177: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737243557: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737248309: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737253883: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737258769: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737264717: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737267871: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737269774: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737271575: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737273376: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737275177: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737277701: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737279502: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737281303: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737283104: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737284905: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737286706: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737288507: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737290308: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737292798: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737295114: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737297274: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737299075: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737300876: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737302677: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737304478: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737306279: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737310597: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737313762: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737315563: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737317364: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737319165: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737321065: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737324103: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737328472: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737333369: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737339236: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737341588: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737343491: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737348520: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737352510: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737356164: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737357965: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737359837: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737363480: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737367133: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737371725: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737376312: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737381080: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737385433: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737389100: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737390901: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737392702: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737394503: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737396304: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737398105: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737399906: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737401707: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737404890: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737408067: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737412128: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737416663: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737421839: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737427949: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737432505: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737437411: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737440727: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737442925: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737447869: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737451643: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737454455: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737460050: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737463629: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737468284: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737472911: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737476639: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737480932: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737484590: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737488252: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737490765: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737494039: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737496414: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737502532: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737507572: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737513523: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737519346: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737522885: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737526198: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737529101: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737532750: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737536415: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737541187: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737543767: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737548564: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737551126: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737553778: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737556434: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737560178: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737563757: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737565558: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737567359: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737569160: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737570961: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737575474: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737578450: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737582098: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737588153: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737593127: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737598998: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737603764: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737608594: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737612170: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737614404: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737618548: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737623290: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737626737: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737630457: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737633731: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737639860: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737645806: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737650687: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737656740: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737659921: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737664008: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737667845: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737669646: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737673036: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737677302: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737683321: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737688163: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737693586: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737698477: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737700381: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737703740: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737706315: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737710649: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737713800: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737716920: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737720335: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737723502: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737727401: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737731156: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737735683: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737737582: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737740179: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737742126: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737748061: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737752264: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737756084: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737760707: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737766652: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737771508: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737777587: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737782136: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737787102: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737789392: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737791193: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737794513: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737796767: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737800719: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737802520: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737806331: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737809237: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737813467: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737816853: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737819811: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737823442: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737825540: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737828882: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737832116: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737833917: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737837032: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737840988: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737843252: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737847383: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737853320: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737858281: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737864063: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737868951: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737873107: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737877436: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737879237: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737881048: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737882859: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737884660: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737886461: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737888262: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737890206: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737892007: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737894785: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737896895: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737898696: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737900497: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737902777: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737904890: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737907141: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737908942: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737910771: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737912890: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737914691: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737916492: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737918293: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737920443: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737925311: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737929810: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737934390: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737939360: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737945207: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737949839: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737955869: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737958299: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737960846: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737962945: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737969061: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737973319: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737977814: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737981491: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737984187: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737987757: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737993192: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737995548: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1737997716: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738001831: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738003836: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738005805: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738007695: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738010135: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738014001: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738020067: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738022471: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738024440: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738026586: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738032796: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738037519: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738041171: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738045658: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738048977: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738053620: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738056584: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738061323: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738063312: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738066803: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738070006: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738075832: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738079750: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738083043: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738085097: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738089453: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738094030: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738097677: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738102675: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738107522: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738113366: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738119579: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738123248: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738126270: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738129031: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738133550: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738137103: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738141542: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738143777: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738147193: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738150194: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738153427: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738157148: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738162635: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738167160: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738170823: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738173901: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738178145: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738182726: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738187346: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738193069: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738198071: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738203935: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738208717: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738213441: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738216965: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738221675: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738223552: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738227369: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738232127: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738236150: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738239057: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738244081: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738247505: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738251402: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738254488: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738256474: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738258605: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738263866: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738269998: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738273008: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738275151: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738281036: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738286918: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738291779: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738295666: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738300568: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738304642: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738308989: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738314593: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738316981: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738322833: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738328785: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738333218: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738338612: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738340413: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738340993: New connection from 192.168.65.1:65065 on port 1883.
+1738340993: New client connected from 192.168.65.1:65065 as auto-94DAC813-023A-0E8F-313F-9A2ABF20417E (p2, c1, k60).
+1738341195: Client auto-94DAC813-023A-0E8F-313F-9A2ABF20417E closed its connection.
+1738341195: New connection from 192.168.65.1:65461 on port 1883.
+1738341195: New client connected from 192.168.65.1:65461 as auto-AF01007C-0DFD-906A-8DFC-5320B08E026F (p2, c1, k60).
+1738341569: Client auto-AF01007C-0DFD-906A-8DFC-5320B08E026F closed its connection.
+1738341569: New connection from 192.168.65.1:16668 on port 1883.
+1738341569: New client connected from 192.168.65.1:16668 as auto-2D8ADBF3-EC0D-7159-FAF7-A7A29E79F0F2 (p2, c1, k60).
+1738341646: Client auto-2D8ADBF3-EC0D-7159-FAF7-A7A29E79F0F2 closed its connection.
+1738341646: New connection from 192.168.65.1:16812 on port 1883.
+1738341646: New client connected from 192.168.65.1:16812 as auto-9FCF970E-6194-9301-5929-C0E00A74BA8E (p2, c1, k60).
+1738341769: Client auto-9FCF970E-6194-9301-5929-C0E00A74BA8E closed its connection.
+1738341770: New connection from 192.168.65.1:17077 on port 1883.
+1738341770: New client connected from 192.168.65.1:17077 as auto-96A3AFB9-B838-B48D-CB97-4E683792B25A (p2, c1, k60).
+1738342214: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738342623: Client auto-96A3AFB9-B838-B48D-CB97-4E683792B25A closed its connection.
+1738342629: New connection from 192.168.65.1:18779 on port 1883.
+1738342629: New client connected from 192.168.65.1:18779 as auto-0A51B594-875E-61BB-58D9-AE5DDA9E5CA0 (p2, c1, k60).
+1738342722: Client auto-0A51B594-875E-61BB-58D9-AE5DDA9E5CA0 closed its connection.
+1738342826: New connection from 192.168.65.1:19158 on port 1883.
+1738342826: New client connected from 192.168.65.1:19158 as auto-03183881-0745-8791-F443-26FF85F2F3F0 (p2, c1, k60).
+1738342832: Client auto-03183881-0745-8791-F443-26FF85F2F3F0 closed its connection.
+1738343677: New connection from 192.168.65.1:20855 on port 1883.
+1738343677: New client connected from 192.168.65.1:20855 as auto-402D3AE6-5CFF-DD44-AC57-A3794ADB8D6E (p2, c1, k60).
+1738344010: Client auto-402D3AE6-5CFF-DD44-AC57-A3794ADB8D6E closed its connection.
+1738344015: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738344162: New connection from 192.168.65.1:21803 on port 1883.
+1738344162: New client connected from 192.168.65.1:21803 as auto-88669260-8538-4465-00BB-ED08523EF04D (p2, c1, k60).
+1738344495: Client auto-88669260-8538-4465-00BB-ED08523EF04D has exceeded timeout, disconnecting.
+1738344496: New connection from 192.168.65.1:22366 on port 1883.
+1738344496: New client connected from 192.168.65.1:22366 as auto-6CAEA8C2-A6DD-21D7-32CC-17515C95353B (p2, c1, k60).
+1738345232: Client auto-6CAEA8C2-A6DD-21D7-32CC-17515C95353B closed its connection.
+1738345816: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738347617: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738348079: New connection from 192.168.65.1:27432 on port 1883.
+1738348079: New client connected from 192.168.65.1:27432 as auto-A754D600-F5D6-A16B-33AA-A5AA6F220A3C (p2, c1, k60).
+1738348342: Client auto-A754D600-F5D6-A16B-33AA-A5AA6F220A3C closed its connection.
+1738348356: New connection from 192.168.65.1:27980 on port 1883.
+1738348356: New client connected from 192.168.65.1:27980 as auto-402D56F4-BDAB-C6CE-4D6A-131FFECCD1EF (p2, c1, k60).
+1738348356: Client auto-402D56F4-BDAB-C6CE-4D6A-131FFECCD1EF closed its connection.
+1738348479: New connection from 192.168.65.1:28232 on port 1883.
+1738348479: New client connected from 192.168.65.1:28232 as auto-3B939F0B-7CDF-C46E-3A6C-351C1E6E6168 (p2, c1, k60).
+1738349418: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738349845: Client auto-3B939F0B-7CDF-C46E-3A6C-351C1E6E6168 closed its connection.
+1738350249: New connection from 192.168.65.1:31736 on port 1883.
+1738350249: New client connected from 192.168.65.1:31736 as auto-63E2F645-6CF5-6DE6-1FD5-C6AA2D8D246C (p2, c1, k60).
+1738350279: Client auto-63E2F645-6CF5-6DE6-1FD5-C6AA2D8D246C closed its connection.
+1738350445: New connection from 192.168.65.1:32114 on port 1883.
+1738350445: New client connected from 192.168.65.1:32114 as auto-832F1148-7E62-4A1D-47FB-BD3250DDEC9A (p2, c1, k60).
+1738350567: Client auto-832F1148-7E62-4A1D-47FB-BD3250DDEC9A closed its connection.
+1738350656: New connection from 192.168.65.1:32530 on port 1883.
+1738350656: New client connected from 192.168.65.1:32530 as auto-6D21E2D3-6084-3A3C-79F8-BD059A683787 (p2, c1, k60).
+1738351025: Client auto-6D21E2D3-6084-3A3C-79F8-BD059A683787 closed its connection.
+1738351219: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738351610: New connection from 192.168.65.1:34426 on port 1883.
+1738351610: New client connected from 192.168.65.1:34426 as auto-181FF066-543C-DB02-8470-44E0D2F65958 (p2, c1, k60).
+1738351867: Client auto-181FF066-543C-DB02-8470-44E0D2F65958 closed its connection.
+1738352430: New connection from 192.168.65.1:36052 on port 1883.
+1738352430: New client connected from 192.168.65.1:36052 as auto-97C25CA1-82E2-EA24-24A4-F0E6B151A14F (p2, c1, k60).
+1738352492: Client auto-97C25CA1-82E2-EA24-24A4-F0E6B151A14F closed its connection.
+1738352620: New connection from 192.168.65.1:36426 on port 1883.
+1738352620: New client connected from 192.168.65.1:36426 as auto-F0EA4E62-5E13-5BD3-42E4-A3A6DEC2D915 (p2, c1, k60).
+1738352680: New connection from 192.168.65.1:36545 on port 1883.
+1738352680: New client connected from 192.168.65.1:36545 as auto-94D20BA3-017E-19F7-8484-ECB67259B23A (p2, c1, k60).
+1738352797: Client auto-F0EA4E62-5E13-5BD3-42E4-A3A6DEC2D915 closed its connection.
+1738352799: New connection from 192.168.65.1:36794 on port 1883.
+1738352799: New client connected from 192.168.65.1:36794 as auto-E2A54829-2956-D586-8F1E-D9030F82D764 (p2, c1, k60).
+1738352845: Client auto-E2A54829-2956-D586-8F1E-D9030F82D764 closed its connection.
+1738353005: New connection from 192.168.65.1:37191 on port 1883.
+1738353005: New client connected from 192.168.65.1:37191 as auto-DD63CA4E-FB2D-A618-D27E-0AC2742FA07E (p2, c1, k60).
+1738353005: Client auto-DD63CA4E-FB2D-A618-D27E-0AC2742FA07E disconnected.
+1738353020: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738353092: New connection from 192.168.65.1:37367 on port 1883.
+1738353092: New client connected from 192.168.65.1:37367 as auto-070C909C-8149-B71B-D107-C4A0E6F2BEC3 (p2, c1, k60).
+1738353146: Client auto-070C909C-8149-B71B-D107-C4A0E6F2BEC3 closed its connection.
+1738353209: New connection from 192.168.65.1:37603 on port 1883.
+1738353209: New client connected from 192.168.65.1:37603 as auto-5511C8C1-8374-832B-8227-B1E6903F1832 (p2, c1, k60).
+1738353248: Client auto-5511C8C1-8374-832B-8227-B1E6903F1832 closed its connection.
+1738353499: Client auto-94D20BA3-017E-19F7-8484-ECB67259B23A has exceeded timeout, disconnecting.
+1738353500: New connection from 192.168.65.1:37975 on port 1883.
+1738353500: New client connected from 192.168.65.1:37975 as auto-6C0EAE6B-6FD6-4105-5C2C-876585C41E54 (p2, c1, k60).
+1738353687: New connection from 192.168.65.1:38346 on port 1883.
+1738353687: New client connected from 192.168.65.1:38346 as auto-8F59F8A1-37ED-A1D4-8E1D-C985BFEB34C8 (p2, c1, k60).
+1738353751: Client auto-8F59F8A1-37ED-A1D4-8E1D-C985BFEB34C8 closed its connection.
+1738354515: New connection from 192.168.65.1:39976 on port 1883.
+1738354515: New client connected from 192.168.65.1:39976 as auto-44AF5E7D-142E-28F3-1BE0-112BDD98121F (p2, c1, k60).
+1738354558: Client auto-44AF5E7D-142E-28F3-1BE0-112BDD98121F closed its connection.
+1738354583: New connection from 192.168.65.1:40114 on port 1883.
+1738354583: New client connected from 192.168.65.1:40114 as auto-D6885FD2-6021-A872-7470-AA32E82F8F3F (p2, c1, k60).
+1738354614: Client auto-D6885FD2-6021-A872-7470-AA32E82F8F3F closed its connection.
+1738354616: New connection from 192.168.65.1:40188 on port 1883.
+1738354616: New client connected from 192.168.65.1:40188 as auto-8C1E67E6-0040-DC61-9B53-204606F710FA (p2, c1, k60).
+1738354662: Client auto-8C1E67E6-0040-DC61-9B53-204606F710FA closed its connection.
+1738354664: New connection from 192.168.65.1:40286 on port 1883.
+1738354664: New client connected from 192.168.65.1:40286 as auto-C79433D0-9022-915B-07FA-F23F00573753 (p2, c1, k60).
+1738354683: Client auto-C79433D0-9022-915B-07FA-F23F00573753 closed its connection.
+1738354715: New connection from 192.168.65.1:40386 on port 1883.
+1738354715: New client connected from 192.168.65.1:40386 as auto-01CAA9CA-E690-99CA-2D85-58B85484C9A9 (p2, c1, k60).
+1738354722: Client auto-01CAA9CA-E690-99CA-2D85-58B85484C9A9 closed its connection.
+1738354733: New connection from 192.168.65.1:40425 on port 1883.
+1738354733: New client connected from 192.168.65.1:40425 as auto-5A31B08D-EEB1-71A6-7F72-918E909784B1 (p2, c1, k60).
+1738354740: Client auto-5A31B08D-EEB1-71A6-7F72-918E909784B1 closed its connection.
+1738354745: New connection from 192.168.65.1:40447 on port 1883.
+1738354745: New client connected from 192.168.65.1:40447 as auto-E36FE0E5-E81F-74AD-C9B0-59FAC083D51C (p2, c1, k60).
+1738354817: Client auto-E36FE0E5-E81F-74AD-C9B0-59FAC083D51C closed its connection.
+1738354821: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738359894: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738359894: Client auto-6C0EAE6B-6FD6-4105-5C2C-876585C41E54 has exceeded timeout, disconnecting.
+1738359895: New connection from 192.168.65.1:40687 on port 1883.
+1738359895: New client connected from 192.168.65.1:40687 as auto-AA83A6A9-938E-B7A6-D412-6345394ED287 (p2, c1, k60).
+1738364184: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738364184: Client auto-AA83A6A9-938E-B7A6-D412-6345394ED287 has exceeded timeout, disconnecting.
+1738364185: New connection from 192.168.65.1:40773 on port 1883.
+1738364185: New client connected from 192.168.65.1:40773 as auto-25DE8290-B6C1-3492-FF29-7BB4CB35D250 (p2, c1, k60).
+1738370094: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738370094: Client auto-25DE8290-B6C1-3492-FF29-7BB4CB35D250 has exceeded timeout, disconnecting.
+1738370095: New connection from 192.168.65.1:40872 on port 1883.
+1738370095: New client connected from 192.168.65.1:40872 as auto-B206D23E-908D-102B-96F4-E695DD98B7C5 (p2, c1, k60).
+1738375033: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738375033: Client auto-B206D23E-908D-102B-96F4-E695DD98B7C5 has exceeded timeout, disconnecting.
+1738375034: New connection from 192.168.65.1:40958 on port 1883.
+1738375034: New client connected from 192.168.65.1:40958 as auto-2B5BE648-2013-7639-4812-BCE82FD72B17 (p2, c1, k60).
+1738380999: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738380999: Client auto-2B5BE648-2013-7639-4812-BCE82FD72B17 has exceeded timeout, disconnecting.
+1738381000: New connection from 192.168.65.1:41057 on port 1883.
+1738381000: New client connected from 192.168.65.1:41057 as auto-7D37DEE8-8364-2341-6D97-9C17960DC85E (p2, c1, k60).
+1738385790: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738385790: Client auto-7D37DEE8-8364-2341-6D97-9C17960DC85E has exceeded timeout, disconnecting.
+1738385791: New connection from 192.168.65.1:41143 on port 1883.
+1738385791: New client connected from 192.168.65.1:41143 as auto-703E96DE-AFE6-480C-A2D4-E11E63DFA817 (p2, c1, k60).
+1738389556: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738389556: Client auto-703E96DE-AFE6-480C-A2D4-E11E63DFA817 has exceeded timeout, disconnecting.
+1738389557: New connection from 192.168.65.1:41227 on port 1883.
+1738389557: New client connected from 192.168.65.1:41227 as auto-FAAD9FFC-1154-2384-049A-ADF355A7153A (p2, c1, k60).
+1738391046: Client auto-FAAD9FFC-1154-2384-049A-ADF355A7153A has exceeded timeout, disconnecting.
+1738391047: New connection from 192.168.65.1:41300 on port 1883.
+1738391047: New client connected from 192.168.65.1:41300 as auto-D1AE98F5-CD06-734A-F867-0182B62C91B9 (p2, c1, k60).
+1738391348: Client auto-D1AE98F5-CD06-734A-F867-0182B62C91B9 has exceeded timeout, disconnecting.
+1738391349: New connection from 192.168.65.1:41491 on port 1883.
+1738391349: New client connected from 192.168.65.1:41491 as auto-BEB319FD-130E-B420-E9A6-5607193A420D (p2, c1, k60).
+1738391357: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738392543: New connection from 192.168.65.1:43843 on port 1883.
+1738392543: New client connected from 192.168.65.1:43843 as auto-2343937E-82C6-17FF-B180-A054C3A909A5 (p2, c1, k60).
+1738392605: Client auto-2343937E-82C6-17FF-B180-A054C3A909A5 closed its connection.
+1738392656: New connection from 192.168.65.1:44075 on port 1883.
+1738392656: New client connected from 192.168.65.1:44075 as auto-D18B1DA8-7677-C068-317E-7AD4F3103C7C (p2, c1, k60).
+1738392766: Client auto-D18B1DA8-7677-C068-317E-7AD4F3103C7C closed its connection.
+1738392815: New connection from 192.168.65.1:44390 on port 1883.
+1738392815: New client connected from 192.168.65.1:44390 as auto-31EC7FE4-F2E3-FFC4-66A1-8A6B66002310 (p2, c1, k60).
+1738392868: Client auto-31EC7FE4-F2E3-FFC4-66A1-8A6B66002310 closed its connection.
+1738392895: New connection from 192.168.65.1:44547 on port 1883.
+1738392895: New client connected from 192.168.65.1:44547 as auto-D73CAB80-BEDC-E85A-00AB-E7E7554E6415 (p2, c1, k60).
+1738392989: Client auto-D73CAB80-BEDC-E85A-00AB-E7E7554E6415 closed its connection.
+1738392992: New connection from 192.168.65.1:44744 on port 1883.
+1738392992: New client connected from 192.168.65.1:44744 as auto-1D8D18E0-0CCB-8750-76AD-FA5ED54FA5FF (p2, c1, k60).
+1738393115: Client auto-1D8D18E0-0CCB-8750-76AD-FA5ED54FA5FF closed its connection.
+1738393158: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738394959: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738397414: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738397414: Client auto-BEB319FD-130E-B420-E9A6-5607193A420D has exceeded timeout, disconnecting.
+1738397415: New connection from 192.168.65.1:51811 on port 1883.
+1738397415: New client connected from 192.168.65.1:51811 as auto-B04992BD-EF3D-7994-E954-86A65DBE98F3 (p2, c1, k60).
+1738398834: mosquitto version 2.0.20 terminating
+1738398834: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738439956: mosquitto version 2.0.20 starting
+1738439956: Config loaded from /mosquitto/config/mosquitto.conf.
+1738439956: Opening ipv4 listen socket on port 1883.
+1738439956: Opening ipv6 listen socket on port 1883.
+1738439956: mosquitto version 2.0.20 running
+1738439957: New connection from 192.168.65.1:62954 on port 1883.
+1738439957: New client connected from 192.168.65.1:62954 as auto-46F26DF1-B068-9FE7-1D86-67A71E301911 (p2, c1, k60).
+1738439959: New connection from 192.168.65.1:62965 on port 1883.
+1738439959: New client connected from 192.168.65.1:62965 as auto-DC788B73-18E3-DD53-242C-6484E41EC290 (p2, c1, k60).
+1738440313: Client auto-DC788B73-18E3-DD53-242C-6484E41EC290 closed its connection.
+1738440316: New connection from 192.168.65.1:63666 on port 1883.
+1738440316: New client connected from 192.168.65.1:63666 as auto-C11EE13C-7E13-23E3-C902-ACD432B900EA (p2, c1, k60).
+1738440872: Client auto-C11EE13C-7E13-23E3-C902-ACD432B900EA closed its connection.
+1738440963: Client auto-46F26DF1-B068-9FE7-1D86-67A71E301911 closed its connection.
+1738441041: New connection from 192.168.65.1:65184 on port 1883.
+1738441041: New client connected from 192.168.65.1:65184 as auto-CCBF28F5-AA6D-F1AB-5BD1-8CA83EE8B9FF (p2, c1, k60).
+1738441757: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1738441898: Client auto-CCBF28F5-AA6D-F1AB-5BD1-8CA83EE8B9FF closed its connection.
