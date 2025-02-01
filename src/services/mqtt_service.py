@@ -2,16 +2,14 @@ import json
 from collections import deque
 
 import paho.mqtt.client as mqtt
+import requests
 
 # Buffer for storing recent MQTT messages
 MESSAGE_BUFFER_SIZE = 100
 message_buffer = deque(maxlen=MESSAGE_BUFFER_SIZE)
 
-# Global variables for SOC limits
-soc_limits = {
-    "upper": 100,  # Default upper limit
-    "lower": 20    # Default lower limit
-}
+# API endpoint for writing power data
+WRITE_ENDPOINT = "http://127.0.0.1:5003/write"
 
 
 def on_connect(client, userdata, flags, rc):
@@ -26,26 +24,24 @@ def on_connect(client, userdata, flags, rc):
 
 
 def on_message(client, userdata, msg):
-    """Handles incoming MQTT messages and updates SOC limits."""
     topic = msg.topic
     payload = msg.payload.decode()
 
-    print(f"Received MQTT message: {topic} -> {payload}")
+    print(f"📩 Received MQTT message on topic: {topic} -> {payload}")
 
-    if topic == "SOC_limits":
+    if topic == "battery/power":
         try:
-            # Parse JSON message
-            data = json.loads(payload)
-            if "upper_limit" in data:
-                soc_limits["upper"] = int(data["upper_limit"])
-                print(f"Updated upper SOC limit: {soc_limits['upper']}")
-
-            if "lower_limit" in data:
-                soc_limits["lower"] = int(data["lower_limit"])
-                print(f"Updated lower SOC limit: {soc_limits['lower']}")
-
+            parsed = json.loads(payload)
+            # Send request to write new power data
+            response = requests.post(WRITE_ENDPOINT, json=parsed)
+            if response.status_code == 200:
+                print(f"Wrote to InfluxDB successfully")
+            else:
+                print(f"Failed to post to InfluxDB: {response.text}")
         except (ValueError, json.JSONDecodeError) as e:
-            print(f"Invalid JSON format received: {e}")
+            print(f"❌ Invalid JSON format received: {e}")
+        except Exception as e:
+            print(f"Error sending power data: {e}")
 
 
 def mqtt_publish(mqtt_client, topic, command):
@@ -63,7 +59,7 @@ def setup_mqtt(app):
 
     # Pass app configuration as userdata to the client
     client.user_data_set({
-        "MQTT_TOPIC": app.config.get("MQTT_TOPIC", "default/topic")
+        "MQTT_TOPIC": "battery/power"
     })
 
     # Set callbacks
@@ -75,4 +71,6 @@ def setup_mqtt(app):
 
     # Connect to the MQTT broker
     client.connect(app.config.get("MQTT_BROKER", "localhost"), app.config.get("MQTT_PORT", 1883))
+    client.subscribe("battery/power")
     client.loop_start()
+

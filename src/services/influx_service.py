@@ -1,6 +1,6 @@
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
-from app.config import Config
+from src.core.config import Config
 from datetime import datetime
 
 
@@ -61,7 +61,7 @@ def influx_write_battery_data(write_api, bucket, org, data):
     try:
         point = (
             Point("battery_data")
-            .field("SOC", data["SOC"])
+            .field("power", data["power"])
             #.field("target_discharge", data["target_discharge"])
             #.field("target_charge", data["target_charge"])
             .time(data.get("timestamp", datetime.utcnow().isoformat()))
@@ -99,7 +99,7 @@ def read_battery_data(query_api, bucket, begin=None, end=None):
             for record in table.records:
                 results.append({
                     "time": record.get_time().isoformat(),
-                    "SOC": record.get_value() if record.get_field() == "SOC" else None,
+                    "power": record.get_value() if record.get_field() == "power" else None,
                     #"target_discharge": record.get_value() if record.get_field() == "target_discharge" else None,
                     #"target_charge": record.get_value() if record.get_field() == "target_charge" else None
                 })

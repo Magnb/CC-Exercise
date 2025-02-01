@@ -3,15 +3,15 @@ from datetime import datetime
 from dateutil.parser import parse
 from flask import Blueprint, request, jsonify, current_app
 from flask_restx import Api, Resource, fields
-from app.config import Config
-from app.repositories.influx_repo import influx_write_battery_data, read_battery_data
-from app.repositories.mqtt_repo import mqtt_publish, message_buffer
+from src import Config
+from src import influx_write_battery_data, read_battery_data
+from src import mqtt_publish, message_buffer
 
 api_blueprint = Blueprint("api", __name__)
 api = Api(api_blueprint, title="Battery API", version="1.0", description="API for battery data management")
 
 # Global variable to store the latest SOC value
-latest_soc = {"value": None, "timestamp": None}
+latest_power = {"power": None, "unit": None, "timestamp": None}
 
 # Swagger Models
 soc_model = api.model("SOC", {
@@ -19,9 +19,59 @@ soc_model = api.model("SOC", {
     "timestamp": fields.String(required=False, description="Timestamp of the SOC reading"),
 })
 
+power_model = api.model("SOC", {
+    "power": fields.Integer(required=True, description="Power value"),
+    "unit": fields.String(required=False, description="Power unit"),
+    "timestamp": fields.String(required=False, description="Timestamp"),
+})
+
 message_model = api.model("Message", {
     "message": fields.String(description="Response message"),
 })
+
+
+@api.route("/setPower", methods=["POST"])
+class SetPower(Resource):
+    @api.doc(description="Send power command via MQTT publishing")
+    @api.expect(api.model("PowerCommand", {
+        "power": fields.Float(required=True, description="Power value"),
+        "unit": fields.String(required=False, description="Unit, defaults to kW")
+
+    }))
+    def post(self):
+        data = request.json
+
+        # Validate request data
+        if "power" not in data:
+            return {"error": "Missing 'power' field"}, 400
+
+        power = data["power"]
+        mqtt_topic = "battery/power"  # Hardcoded MQTT topic for power values
+
+        unit = "kW"
+        timestamp = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+        if "unit" in data:
+            unit = data["unit"]
+
+        try:
+            # Publish as a JSON object
+            mqtt_message = {
+                "power": power,
+                "unit": unit,
+                "timestamp": timestamp
+            }
+
+            mqtt_publish(
+                mqtt_client=current_app.mqtt_client,
+                topic=mqtt_topic,
+                command=json.dumps(mqtt_message)
+            )
+
+            print(f"Published power: {mqtt_message} to {mqtt_topic}")
+            return {"message": f"Power set to: {power} {unit}"}, 200
+
+        except Exception as e:
+            return {"error": str(e)}, 500
 
 
 # READ BATTERY DATA WITH TIME INTERVALS
@@ -32,7 +82,7 @@ class ReadBatteryData(Resource):
     @api.param("end", "End time for query (default: now())", required=False)
     def get(self):
         """Fetch battery data based on time range"""
-        begin = request.args.get("begin") or "-14h"
+        begin = request.args.get("begin") or "-1h"
         end = request.args.get("end") or "now()"
         try:
             results = read_battery_data(
@@ -48,18 +98,18 @@ class ReadBatteryData(Resource):
 
 @api.route("/write")
 class WriteBatteryData(Resource):
-    @api.expect(soc_model)
+    @api.expect(power_model)
     @api.response(200, "Data written successfully", message_model)
     @api.response(400, "Invalid payload")
     def post(self):
-        """Write battery SOC data"""
+        """Write battery power data"""
         data = request.json
         if not data:
             return {"error": "Invalid payload"}, 400
 
         try:
-            global latest_soc
-            latest_soc["value"] = data["SOC"]
+            global latest_power
+            latest_power["value"] = data["power"]
 
             # If no timestamp is provided, take the current time in UTC and set seconds & milliseconds to 00
             if "timestamp" in data:
@@ -68,7 +118,7 @@ class WriteBatteryData(Resource):
                 now = datetime.utcnow().replace(second=0, microsecond=0)  # Set seconds and microseconds to 00
                 parsed_timestamp = now.isoformat() + "Z"  # Append "Z" for UTC indication
 
-            latest_soc["timestamp"] = parsed_timestamp
+            latest_power["timestamp"] = parsed_timestamp
 
             #mqtt_publish(
               #  mqtt_client=current_app.mqtt_client,
@@ -106,7 +156,7 @@ class GetCurrentSOC(Resource):
     @api.doc(description="Retrieve the latest SOC value")
     def get(self):
         """Get the latest SOC value"""
-        return jsonify(latest_soc)
+        return jsonify(latest_power)
 
 
 @api.route("/timeseries")
@@ -125,42 +175,4 @@ class GetSOCTimeseries(Resource):
         except RuntimeError as e:
             return {"error": str(e)}, 500
 
-
-@api.route("/setSOClimits", methods=["POST"])
-class SetSOCLimits(Resource):
-    @api.doc(description="Set the upper and lower SOC limit via MQTT")
-    @api.expect(api.model("SOCLimits", {
-        "upper_limit": fields.Float(required=True, description="Upper SOC limit value"),
-        "lower_limit": fields.Float(required=True, description="Lower SOC limit value")
-    }))
-    def post(self):
-        """Set both upper and lower SOC limits and publish them via MQTT"""
-        data = request.json
-
-        # Validate request data
-        if "upper_limit" not in data or "lower_limit" not in data:
-            return {"error": "Missing 'upper_limit' or 'lower_limit' field"}, 400
-
-        upper_limit = data["upper_limit"]
-        lower_limit = data["lower_limit"]
-        mqtt_topic = "battery/SOC_limits"  # Hardcoded MQTT topic for limits
-
-        try:
-            # Publish both limits as a JSON object
-            mqtt_message = {
-                "upper_limit": upper_limit,
-                "lower_limit": lower_limit
-            }
-
-            mqtt_publish(
-                mqtt_client=current_app.mqtt_client,
-                topic=mqtt_topic,
-                command=json.dumps(mqtt_message)
-            )
-
-            print(f"Published SOC limits: {mqtt_message} to {mqtt_topic}")
-            return {"message": f"SOC limits set: Upper = {upper_limit}, Lower = {lower_limit}"}, 200
-
-        except Exception as e:
-            return {"error": str(e)}, 500
 

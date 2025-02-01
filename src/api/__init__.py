@@ -1,7 +1,7 @@
-from app.config import Config
-from app.custom_flask import CustomFlask
-from app.repositories.influx_repo import setup_influxdb
-from app.repositories.mqtt_repo import setup_mqtt
+from src.core.config import Config
+from src.core.custom_flask import CustomFlask
+from src.services.influx_service import setup_influxdb
+from src.services.mqtt_service import setup_mqtt
 
 
 def create_app():
@@ -16,7 +16,7 @@ def create_app():
     setup_mqtt(app)
 
     # Register routes
-    from app.api.routes import api_blueprint
+    from src.api.routes import api_blueprint
     app.register_blueprint(api_blueprint)
 
     return app
