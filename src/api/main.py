@@ -1,4 +1,4 @@
-from src import create_app
+from src.api import create_app  # ✅ Absolute import (if needed)
 
 app = create_app()
 

@@ -1,11 +1,11 @@
 from src.core.config import Config
-from src.core.custom_flask import CustomFlask
+from src.core.influx_db_flask import InfluxDBFlaskApp
 from src.services.influx_service import setup_influxdb
-from src.services.mqtt_service import setup_mqtt
+from src.services.mqtt_service import setup_mqtt_publisher
 
 
 def create_app():
-    app = CustomFlask(__name__)
+    app = InfluxDBFlaskApp(__name__)
 
     app.config.from_object(Config)
 
@@ -13,7 +13,7 @@ def create_app():
     setup_influxdb(app)
 
     # Initialize MQTT client
-    setup_mqtt(app)
+    setup_mqtt_publisher(app)
 
     # Register routes
     from src.api.routes import api_blueprint

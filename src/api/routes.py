@@ -3,9 +3,11 @@ from datetime import datetime
 from dateutil.parser import parse
 from flask import Blueprint, request, jsonify, current_app
 from flask_restx import Api, Resource, fields
-from src import Config
-from src import influx_write_battery_data, read_battery_data
-from src import mqtt_publish, message_buffer
+
+from src.api.mqtt_publisher import mqtt_publish
+from src.core.config import Config
+from src.services.influx_service import read_battery_data, influx_write_battery_data
+#from src.services.mqtt_service import message_buffer, mqtt_publish
 
 api_blueprint = Blueprint("api", __name__)
 api = Api(api_blueprint, title="Battery API", version="1.0", description="API for battery data management")
@@ -62,7 +64,7 @@ class SetPower(Resource):
             }
 
             mqtt_publish(
-                mqtt_client=current_app.mqtt_client,
+               # mqtt_client=current_app.mqtt_client,
                 topic=mqtt_topic,
                 command=json.dumps(mqtt_message)
             )
@@ -143,12 +145,12 @@ class WriteBatteryData(Resource):
 
 
 
-@api.route("/messages")
-class GetMessages(Resource):
-    @api.doc(description="Retrieve recent MQTT messages")
-    def get(self):
-        """Get recent MQTT messages"""
-        return jsonify(list(message_buffer))
+# @api.route("/messages")
+# class GetMessages(Resource):
+#     @api.doc(description="Retrieve recent MQTT messages")
+#     def get(self):
+#         """Get recent MQTT messages"""
+#         return jsonify(list(message_buffer))
 
 
 @api.route("/current-soc")

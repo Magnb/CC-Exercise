@@ -5,7 +5,8 @@ import plotly.graph_objects as go
 import requests
 
 # API endpoint to fetch data
-API_URL = "http://127.0.0.1:5003/read"
+#API_URL = "http://127.0.0.1:5003/read"
+API_URL = "http://flask-app:5003/read"
 
 
 # Function to fetch time series data from Flask API

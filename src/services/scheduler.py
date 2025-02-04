@@ -5,7 +5,8 @@ from datetime import datetime
 import threading
 
 # API endpoint for writing power data
-WRITE_ENDPOINT = "http://127.0.0.1:5003/setPower"
+
+WRITE_ENDPOINT = "flask-app:5003/setPower"
 
 
 def get_power_command():

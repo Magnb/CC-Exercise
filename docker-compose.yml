@@ -6,6 +6,7 @@ networks:
 
 volumes:
   influxdb-storage:
+    driver: local
 
 services:
   influxdb:
@@ -14,11 +15,11 @@ services:
     ports:
       - '8086:8086'
     volumes:
-      - influxdb-storage:/var/lib/influxdb
+      - influxdb-storage:/var/lib/influxdb2
     environment:
       - INFLUXDB_DB=db0
-      - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_PASSWORD=admin
+      - INFLUXDB_ADMIN_USER=magdalena
+      - INFLUXDB_ADMIN_PASSWORD=magdalena
     networks:
       - values_network
 
@@ -32,5 +33,68 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+    environment:
+      - MQTT_BROKER_HOST=mqtt-broker
+      - MQTT_BROKER_PORT=1883
+      - FLASK_API_HOST=flask-app  # Ensuring the correct service name
+      - FLASK_API_PORT=5003  # Ensuring correct Flask API port
     networks:
       - values_network
+
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-app
+    ports:
+      - '5003:5003'
+    depends_on:
+      - influxdb
+      - mqtt-broker
+    environment:
+      - FLASK_ENV=development
+      - INFLUXDB_HOST=influxdb
+      - INFLUXDB_PORT=8086
+      - INFLUXDB_URL=http://influxdb:8086
+      - INFLUXDB_ORG=ENI
+      - INFLUXDB_BUCKET=battery1
+      - INFLUXDB_TOKEN=oNbS4DQvupHwZhvaZFYfADESfx84kKPHFtpZ659uie9IOAG87VkXadSqOG3tZsnqk2X_x8YZ87Sd4OA29lTXHA==
+      - MQTT_BROKER_HOST=mqtt-broker
+      - MQTT_BROKER=mqtt-broker
+      - MQTT_PORT=1883
+    networks:
+      - values_network
+
+  dashboard-app:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: dashboard-app
+    ports:
+      - '8501:8501'
+    depends_on:
+      - flask-app
+    networks:
+      - values_network
+
+  mqtt-service:
+    build:
+      context: .
+      dockerfile: mqtt.Dockerfile
+    container_name: mqtt-service
+    depends_on:
+      - flask-app
+      - mqtt-broker
+    environment:
+      - MQTT_BROKER_HOST=mqtt-broker
+      - MQTT_BROKER_PORT=1883
+      - FLASK_API_HOST=flask-app
+      - FLASK_API_PORT=5003
+    networks:
+      - values_network
+
+
+
+
+
+
