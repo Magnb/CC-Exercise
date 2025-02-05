@@ -1,4 +1,5 @@
 # Battery Management Microservices Application
+* This is a demo application for learning purposes trying out Python Flask with Streamlit *
 
 ## 🚀 Overview
 This microservices-based application manages battery charge and discharge data using **Flask, MQTT, InfluxDB, and Streamlit**. It provides:
