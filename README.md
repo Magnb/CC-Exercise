@@ -1,9 +1,7 @@
-http://localhost:5003/read?begin=2025-01-01T00:00:00Z&end=2025-02-02T23:59:59Z
-http://localhost:5003/messages
+# Battery Charging
 
 ## POC for Real-Time Battery Monitoring and Control:
-Monitor the State of Charge (SOC) in kWh.
-Display target charge/discharge in kW for real-time control.
+Monitor the Charging values of a battery.
 Log and visualize historical data for insights and diagnostics.
 Build using Flask microservices for flexibility and scalability.
 Use MQTT for lightweight communication, enabling integration with IoT devices.
@@ -12,25 +10,10 @@ Time Series Visualization:
 Leverage Plotly for interactive time-series graphs of SOC and power usage.
 Provide users with actionable insights into their energy usage and market performance.
 
-## Endpoints for the Flask Microservice
-Here are possible API endpoints to interact with the system:
-
-Endpoint	Method	Description
-/api/battery/soc	GET	Retrieve current SOC in kWh.
-/api/battery/target	GET	Retrieve target charge and discharge rates (kW).
-/api/battery/log	GET	Retrieve historical data for SOC and target charge/discharge.
-/api/battery/set_target	POST	Set target charge and discharge rates (kW).
-/api/market/prices	GET	Retrieve forecasted intra-day electricity prices.
-/api/market/optimize	POST	Generate an optimal schedule based on battery state and price forecasts.
-/api/mqtt/publish	POST	Publish battery commands (e.g., charge/discharge) to MQTT topics.
-/api/mqtt/subscribe	GET	Subscribe to MQTT topics for receiving real-time updates (e.g., price changes).
-
-
 ## Database Design
 Use InfluxDB to store time-series data, including:
 
 Battery Metrics:
-SOC (kWh)
 Charge/Discharge rate (kW)
 Timestamp
 

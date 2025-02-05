@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 import requests
 
 # API endpoint to fetch data
-#API_URL = "http://127.0.0.1:5003/read"
 API_URL = "http://flask-app:5003/read"
 
 
@@ -28,27 +27,32 @@ def plot_time_series(data, chart_type):
 
     if chart_type == "Line Chart":
         fig.add_trace(go.Scatter(
-            x=df["time"], y=df["power"],
+            x=df["time"], y=df["charge"],
             mode="lines+markers",
-            name="Power (kW)"
+            name="Charging (kW)"
+        ))
+        fig.add_trace(go.Scatter(
+            x=df["time"], y=df["discharge"],
+            mode="lines+markers",
+            name="Discharging (kW)"
         ))
     elif chart_type == "Bar Chart":
         fig.add_trace(go.Bar(
-            x=df["time"], y=df["power"],
-            name="Power (kW)"
+            x=df["time"], y=df["charge"],
+            name="Charging (kW)"
         ))
 
     fig.update_layout(
-        title="⚡ Power Over Time",
+        title="⚡ Charging Over Time",
         xaxis_title="Time",
-        yaxis_title="Power (kW)",
+        yaxis_title="Charging (kW)",
         template="plotly_dark"
     )
     return fig
 
 
 # Streamlit UI
-st.title("📈 Power Monitoring Dashboard")
+st.title("📈 Battery Charging Monitoring Dashboard")
 
 # Fetch & Display Data
 data = fetch_time_series()
@@ -67,9 +71,9 @@ if data:
 
     # Summary Statistics
     st.sidebar.subheader("📊 Summary Statistics")
-    st.sidebar.metric("🔼 Max Power", f"{df['power'].max()} kW")
-    st.sidebar.metric("🔽 Min Power", f"{df['power'].min()} kW")
-    st.sidebar.metric("⚡ Average Power", f"{df['power'].mean():.2f} kW")
+    st.sidebar.metric("🔼 Max charge", f"{df['charge'].max()} kW")
+    st.sidebar.metric("🔽 Min charge", f"{df['charge'].min()} kW")
+    st.sidebar.metric("⚡ Average charge", f"{df['charge'].mean():.2f} kW")
 
     # Show raw data in an expandable table
     with st.expander("📊 View Raw Data"):

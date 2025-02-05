@@ -45,16 +45,15 @@ def read_battery_data(query_api, bucket, begin=None, end=None):
             for record in table.records:
                 results.append({
                     "time": record.get_time().isoformat(),
-                    "power": record.get_value() if record.get_field() == "power" else None,
-                    #"target_discharge": record.get_value() if record.get_field() == "target_discharge" else None,
-                    #"target_charge": record.get_value() if record.get_field() == "target_charge" else None
+                    "charge": record.get_value() if record.get_field() == "charge" else None,
+                    "discharge": record.get_value() if record.get_field() == "discharge" else None,
                 })
         return results
     except Exception as e:
         raise RuntimeError(f"Error reading data from InfluxDB: {str(e)}")
 
 
-def influx_write_battery_soc(write_api, bucket, org, data):
+def influx_write_charge(write_api, bucket, org, data):
     """
     Write battery data to InfluxDB.
 
@@ -70,7 +69,7 @@ def influx_write_battery_soc(write_api, bucket, org, data):
     try:
         point = (
             Point("battery_data")
-            .field("SOC", data["SOC"])
+            .field("charge", data["charge"])
             .time(data.get("timestamp", datetime.utcnow().isoformat()))
         )
         write_api.write(bucket=bucket, org=org, record=point)
@@ -81,7 +80,7 @@ def influx_write_battery_soc(write_api, bucket, org, data):
         raise RuntimeError(f"Failed to write data: {str(e)}")
 
 
-def influx_write_battery_data(write_api, bucket, org, data):
+def influx_write_discharge(write_api, bucket, org, data):
     """
     Write battery data to InfluxDB.
 
@@ -97,9 +96,7 @@ def influx_write_battery_data(write_api, bucket, org, data):
     try:
         point = (
             Point("battery_data")
-            .field("power", data["power"])
-            #.field("target_discharge", data["target_discharge"])
-            #.field("target_charge", data["target_charge"])
+            .field("discharge", data["discharge"])
             .time(data.get("timestamp", datetime.utcnow().isoformat()))
         )
         write_api.write(bucket=bucket, org=org, record=point)

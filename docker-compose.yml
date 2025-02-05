@@ -36,8 +36,8 @@ services:
     environment:
       - MQTT_BROKER_HOST=mqtt-broker
       - MQTT_BROKER_PORT=1883
-      - FLASK_API_HOST=flask-app  # Ensuring the correct service name
-      - FLASK_API_PORT=5003  # Ensuring correct Flask API port
+      - FLASK_API_HOST=flask-app
+      - FLASK_API_PORT=5003
     networks:
       - values_network
 
@@ -59,6 +59,7 @@ services:
       - INFLUXDB_ORG=ENI
       - INFLUXDB_BUCKET=battery1
       - INFLUXDB_TOKEN=oNbS4DQvupHwZhvaZFYfADESfx84kKPHFtpZ659uie9IOAG87VkXadSqOG3tZsnqk2X_x8YZ87Sd4OA29lTXHA==
+      #- INFLUXDB_TOKEN=${INFLUXDB_TOKEN}  # Load from .env
       - MQTT_BROKER_HOST=mqtt-broker
       - MQTT_BROKER=mqtt-broker
       - MQTT_PORT=1883
@@ -74,6 +75,8 @@ services:
       - '8501:8501'
     depends_on:
       - flask-app
+    volumes:
+      - ./src:/app/src
     networks:
       - values_network
 
@@ -85,6 +88,8 @@ services:
     depends_on:
       - flask-app
       - mqtt-broker
+    volumes:
+      - ./src:/app/src
     environment:
       - MQTT_BROKER_HOST=mqtt-broker
       - MQTT_BROKER_PORT=1883

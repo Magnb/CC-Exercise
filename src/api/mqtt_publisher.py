@@ -6,6 +6,7 @@ import paho.mqtt.client as mqtt
 MQTT_BROKER_HOST = os.getenv("MQTT_BROKER_HOST", "mqtt-broker")
 MQTT_BROKER_PORT = int(os.getenv("MQTT_BROKER_PORT", 1883))
 
+
 def mqtt_publish(topic, command):
     """
     Publishes a message to the MQTT broker.
@@ -20,3 +21,5 @@ def mqtt_publish(topic, command):
         print(f"✅ Published to {topic}: {command}")
     except Exception as e:
         print(f"❌ Failed to publish MQTT message: {e}")
+
+

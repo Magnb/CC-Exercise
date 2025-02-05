@@ -4,31 +4,31 @@ import requests
 from datetime import datetime
 import threading
 
-# API endpoint for writing power data
+# API endpoint for writing charge data
 
-WRITE_ENDPOINT = "flask-app:5003/setPower"
+WRITE_ENDPOINT = "flask-app:5003/setcharge"
 
 
-def get_power_command():
-    """Fetch the latest power value from MQTT or use the default."""
+def get_charge_command():
+    """Fetch the latest charge value from MQTT or use the default."""
     while True:
-        current_power = random.randint(10, 20)
-        print(f"🔄 New power value to send: {current_power}")
+        current_charge = random.randint(10, 20)
+        print(f"🔄 New charge value to send: {current_charge}")
 
         return {
-            "power": current_power,
+            "charge": current_charge,
             "unit": "kW"
         }
 
 
-def generate_power_value():
+def generate_charge_value():
     """Generate an SOC value between the latest stored command."""
-    command = get_power_command()
-    return command["power"]
+    command = get_charge_command()
+    return command["charge"]
 
 
-def send_power_data():
-    """Continuously writes power data every full minute."""
+def send_charge_data():
+    """Continuously writes charge data every full minute."""
     while True:
         # Get the current time and wait for the next full minute
         now = datetime.utcnow()
@@ -36,31 +36,31 @@ def send_power_data():
         time.sleep(sleep_time)  # Pause execution
 
         # Generate an SOC value within the limits
-        command = get_power_command()
+        command = get_charge_command()
 
         # Create timestamp with minute precision
         timestamp = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
 
         # Prepare data payload
         data = {
-            "power": command["power"],
+            "charge": command["charge"],
             "unit": command["unit"],
             #"timestamp": timestamp
         }
 
         try:
-            # Send request to write new power data
+            # Send request to write new charge data
             response = requests.post(WRITE_ENDPOINT, json=data)
             if response.status_code == 200:
-                print(f"[{timestamp}] Sent power value {command} successfully.")
+                print(f"[{timestamp}] Sent charge value {command} successfully.")
             else:
-                print(f"[{timestamp}] Failed to send power value: {response.text}")
+                print(f"[{timestamp}] Failed to send charge value: {response.text}")
         except Exception as e:
-            print(f"Error sending power data: {e}")
+            print(f"Error sending charge data: {e}")
 
 
 # Start the SOC writer in a separate thread
-soc_writer_thread = threading.Thread(target=send_power_data, daemon=True)
+soc_writer_thread = threading.Thread(target=send_charge_data, daemon=True)
 soc_writer_thread.start()
 
 # Prevent main thread from exiting
