@@ -4,9 +4,8 @@ import requests
 from datetime import datetime
 import threading
 
-# API endpoint for writing charge data
 
-WRITE_ENDPOINT = "flask-app:5003/setcharge"
+WRITE_ENDPOINT_CHARGE = "http://localhost:5003/charge"
 
 
 def get_charge_command():
@@ -19,12 +18,6 @@ def get_charge_command():
             "charge": current_charge,
             "unit": "kW"
         }
-
-
-def generate_charge_value():
-    """Generate an SOC value between the latest stored command."""
-    command = get_charge_command()
-    return command["charge"]
 
 
 def send_charge_data():
@@ -44,13 +37,12 @@ def send_charge_data():
         # Prepare data payload
         data = {
             "charge": command["charge"],
-            "unit": command["unit"],
-            #"timestamp": timestamp
+            "unit": command["unit"]
         }
 
         try:
             # Send request to write new charge data
-            response = requests.post(WRITE_ENDPOINT, json=data)
+            response = requests.post(WRITE_ENDPOINT_CHARGE, json=data)
             if response.status_code == 200:
                 print(f"[{timestamp}] Sent charge value {command} successfully.")
             else:
@@ -59,9 +51,9 @@ def send_charge_data():
             print(f"Error sending charge data: {e}")
 
 
-# Start the SOC writer in a separate thread
-soc_writer_thread = threading.Thread(target=send_charge_data, daemon=True)
-soc_writer_thread.start()
+# Start the writer in a separate thread
+schedule_writer_thread = threading.Thread(target=send_charge_data, daemon=True)
+schedule_writer_thread.start()
 
 # Prevent main thread from exiting
-soc_writer_thread.join()  # This will keep the main script running
+schedule_writer_thread.join()  # This will keep the main script running

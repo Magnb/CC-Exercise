@@ -11,11 +11,10 @@ from src.services.influx_service import read_battery_data, influx_write_charge, 
 api_blueprint = Blueprint("api", __name__)
 api = Api(api_blueprint, title="Battery API", version="1.0", description="API for battery data management")
 
-# Global variable to store the latest SOC value
-latest_charge = {"charge": None, "unit": "kW", "timestamp": None}
+# Global variable to store the latest value
+latest_charge = {"charge": None, "discharge": None, "unit": "kW", "timestamp": None}
 
 # Swagger Models
-
 charge_model = api.model("Charging", {
     "charge": fields.Integer(required=True, description="charge value"),
     "unit": fields.String(required=False, description="charge unit"),
@@ -23,14 +22,14 @@ charge_model = api.model("Charging", {
 })
 
 discharge_model = api.model("Discharging", {
-    "discharge": fields.Integer(required=True, description="charge value"),
-    "unit": fields.String(required=False, description="charge unit"),
+    "discharge": fields.Integer(required=True, description="discharge value"),
+    "unit": fields.String(required=False, description="discharge unit"),
     "timestamp": fields.String(required=False, description="Timestamp"),
 })
 
 
 @api.route("/charge", methods=["POST"])
-class Setcharge(Resource):
+class SetCharge(Resource):
     @api.doc(description="Send charge command via MQTT publishing")
     @api.expect(api.model("chargeCommand", {
         "charge": fields.Float(required=True, description="charge value"),
@@ -38,6 +37,7 @@ class Setcharge(Resource):
 
     }))
     def post(self):
+        """Send charge value"""
         data = request.json
 
         # Validate request data
@@ -78,14 +78,14 @@ class SetDischarge(Resource):
     @api.expect(api.model("dischargeCommand", {
         "discharge": fields.Float(required=True, description="discharge value"),
         "unit": fields.String(required=False, description="Unit, defaults to kW")
-
     }))
     def post(self):
+        """Send discharge value"""
         data = request.json
 
         # Validate request data
         if "discharge" not in data:
-            return {"error": "Missing 'charge' field"}, 400
+            return {"error": "Missing 'discharge' field"}, 400
 
         discharge = data["discharge"]
 
@@ -108,8 +108,8 @@ class SetDischarge(Resource):
                 command=json.dumps(mqtt_message)
             )
 
-            print(f"Published charge: {mqtt_message} to {Config.MQTT_TOPIC_DISCHARGE}")
-            return {"message": f"charge set to: {discharge} {unit}"}, 200
+            print(f"Published discharge: {mqtt_message} to {Config.MQTT_TOPIC_DISCHARGE}")
+            return {"message": f"Discharge value set to: {discharge} {unit}"}, 200
 
         except Exception as e:
             return {"error": str(e)}, 500
@@ -136,7 +136,7 @@ class ReadBatteryData(Resource):
             return {"error": str(e)}, 500
 
 
-@api.route("/write")
+@api.route("/writeCharge")
 class WriteChargeValue(Resource):
     @api.expect(charge_model)
     @api.response(200, "Data written successfully")
@@ -149,7 +149,7 @@ class WriteChargeValue(Resource):
 
         try:
             global latest_charge
-            latest_charge["value"] = data["charge"]
+            latest_charge["charge"] = data["charge"]
 
             # If no timestamp is provided, take the current time in UTC and set milliseconds to 00
             if "timestamp" in data:
@@ -182,18 +182,23 @@ class WriteDischargeValue(Resource):
     @api.response(200, "Data written successfully")
     @api.response(400, "Invalid payload")
     def post(self):
-        """Write battery charge data"""
+        """Write battery discharge data"""
         data = request.json
         if not data:
             return {"error": "Invalid payload"}, 400
 
         try:
+            global latest_charge
+            latest_charge["discharge"] = data["discharge"]
             # If no timestamp is provided, take the current time in UTC and set milliseconds to 00
             if "timestamp" in data:
                 parsed_timestamp = parse(data["timestamp"]).isoformat()
             else:
                 now = datetime.utcnow().replace(microsecond=0)
                 parsed_timestamp = now.isoformat() + "Z"  # Append "Z" for UTC indication
+
+
+            latest_charge["timestamp"] = parsed_timestamp
 
             influx_write_discharge(
                 write_api=current_app.write_api,
@@ -215,5 +220,5 @@ class WriteDischargeValue(Resource):
 class GetCurrentSOC(Resource):
     @api.doc(description="Retrieve the latest charging value")
     def get(self):
-        """Get the latest SOC value"""
+        """Get the latest value"""
         return jsonify(latest_charge)

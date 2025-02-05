@@ -1,66 +1,113 @@
-# Battery Charging
+# Battery Management Microservices Application
 
-## POC for Real-Time Battery Monitoring and Control:
-Monitor the Charging values of a battery.
-Log and visualize historical data for insights and diagnostics.
-Build using Flask microservices for flexibility and scalability.
-Use MQTT for lightweight communication, enabling integration with IoT devices.
+## 🚀 Overview
+This microservices-based application manages battery charge and discharge data using **Flask, MQTT, InfluxDB, and Streamlit**. It provides:
+- **Battery API (Flask)** for managing charge/discharge values via **MQTT** and storing them in **InfluxDB**.
+- **MQTT Service** for publishing battery charge/discharge data.
+- **InfluxDB** for storing historical battery data.
+- **Streamlit Dashboard** for real-time monitoring.
 
-Time Series Visualization:
-Leverage Plotly for interactive time-series graphs of SOC and power usage.
-Provide users with actionable insights into their energy usage and market performance.
+---
+## 📌 Architecture
+### **🔹 Components & Technologies**
+- **Flask API**: Manages battery charge/discharge commands & stores data in InfluxDB.
+- **MQTT Broker (Eclipse Mosquitto)**: Handles message communication.
+- **InfluxDB**: Stores battery charge & discharge history.
+- **Streamlit Dashboard**: Visualizes real-time data.
+- **Docker & Docker Compose**: Containerized setup.
 
-## Database Design
-Use InfluxDB to store time-series data, including:
+---
+## 🏗️ Setup Instructions
 
-Battery Metrics:
-Charge/Discharge rate (kW)
-Timestamp
+### **🔹 Prerequisites**
+Ensure you have the following installed:
+- Docker & Docker Compose
+- Python 3.x (for local development)
 
-## MQTT Use Case
-Use MQTT for real-time communication:
+### **🔹 Start the Application (Dockerized Setup)**
+```sh
+docker-compose up -d --build
+```
 
-Publish:
-Commands for charge/discharge rates - e.g. Discharge 50kW
-Subscribe:
-Updates on market prices or battery state changes.
+### **🔹 Start the Application (Manual Setup Without Docker)**
+1. Install dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+2. Start the **MQTT broker (Mosquitto)**:
+    ```sh
+    mosquitto -v
+    ```
+3. Start the **Flask API**:
+    ```sh
+    python src/api/main.py
+    ```
+4. Start the **Streamlit Dashboard**:
+    ```sh
+    streamlit run src/dashboard/app.py
+    ```
 
-## Visualization
-Use Plotly to create dashboards with the following graphs:
+---
+## 📡 API Endpoints (Flask Battery API)
+| **Endpoint** | **Method** | **Description** |
+|-------------|-----------|----------------|
+| `/charge` | `POST` | Publish charge data via MQTT |
+| `/discharge` | `POST` | Publish discharge data via MQTT |
+| `/writeCharge` | `POST` | Store charge data in InfluxDB |
+| `/writeDischarge` | `POST` | Store discharge data in InfluxDB |
+| `/read` | `GET` | Retrieve battery data from InfluxDB |
+| `/livedata` | `GET` | Fetch the latest charge/discharge values |
 
-SOC Over Time: Visualize the battery's charge level (kWh).
-Charge/Discharge Trends: Show when and how the battery is charged/discharged.
+### **🔹 Example API Usage**
+```sh
+curl -X POST http://localhost:5003/charge -H "Content-Type: application/json" -d '{"charge": 10, "unit": "kW"}'
+```
+```sh
+curl -X GET http://localhost:5003/livedata
+```
 
-### Optional Optimization Feature
-Market Data:
-Forecasted intra-day electricity prices
-Timestamps
+---
+## 📊 Streamlit Dashboard (Live Monitoring)
+1. Access the dashboard at:
+    ```sh
+    http://localhost:8501
+    ```
+2. Displays real-time charge & discharge values from `/livedata`.
 
-Incorporate a simple optimization model for battery operations:
+---
+## ⚡ MQTT Topics
+| **Topic** | **Description** |
+|-----------|----------------|
+| `battery/charge` | Publishes charge data via MQTT |
+| `battery/discharge` | Publishes discharge data via MQTT |
 
-Market Optimization (Optional but adds value):
-Use forecasted intra-day prices to optimize when to charge or discharge the battery for cost savings or profit maximization.
-Generate optimal charge/discharge schedules.
+---
+## 🔄 Restarting a Single Service
+```sh
+docker-compose restart flask-app  # Restart Flask API
+```
+```sh
+docker-compose restart mqtt-service  # Restart MQTT Service
+```
 
-Use forecasted intra-day prices to calculate:
-When to charge (low prices).
-When to discharge (high prices).
-Constraints:
-Max/min SOC limits.
-Battery efficiency (roundtrip loss).
-Maximum charge/discharge rates.
-Generate an hourly schedule and display it on the dashboard.
+---
+## 🛠️ Troubleshooting
+### **🔹 Check Logs**
+```sh
+docker logs flask-app  # View API logs
+```
+```sh
+docker logs mqtt-service  # View MQTT logs
+```
+```sh
+docker logs influxdb  # View InfluxDB logs
+```
+### **🔹 Verify Docker Containers Are Running**
+```sh
+docker ps
+```
 
-Visualize Market Prices vs. Battery Behavior: Correlate price changes with battery usage to validate the optimization.
+---
 
-
-curl -X POST http://127.0.0.1:5000/write -H "Content-Type: application/json" \
--d '{"SOC": 700, "target_discharge": 50, "target_charge": 100, "timestamp": "2025-01-16T10:00:00Z"}'
-
-curl "http://127.0.0.1:5003/read?begin=2025-01-16T09:00:00Z&end=2025-01-16T11:00:00Z"
-
-curl -X POST http://127.0.0.1:5000/mqtt/publish -H "Content-Type: application/json" \
--d '{"command": "DISCHARGE 50kW"}'
-
-curl -X POST http://127.0.0.1:5003/write -H "Content-Type: application/json" \
--d '{"SOC": 500, "target_discharge": 0, "target_charge": 400, "timestamp": "2025-01-14T10:00:00Z"}'
+## 👨‍💻 Authors & Contributors
+- **Magdalena Breitenauer**
